@@ -10,6 +10,11 @@ import java.util.function.DoubleToIntFunction;
 
 public class Main {
     public static void main(String[] args) {
+
+        Employee employee = new Employee("",null,null,"",-1000d);
+        System.out.println(employee);
+        System.out.println("==========================");
+
         List<Employee> employees = List.of(
                 new Employee("Alice", 30, "Blonde", "Google", 75000d),
                 new Employee("Bob", 25, "Brown", "Amazon", 80000d),

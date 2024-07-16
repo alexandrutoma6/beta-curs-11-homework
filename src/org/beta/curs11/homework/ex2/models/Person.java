@@ -12,9 +12,34 @@ public class Person {
             Integer age,
             String hairColour
     ) {
-        this.name = name;
-        this.age = age;
-        this.hairColour = hairColour;
+        if (isEmptyOrNull(name)) {
+            this.name = "unknown";
+        } else {
+            this.name = name;
+        }
+        if(isPositiveNumber(age)){
+            this.age = age;
+        }else{
+            this.age = 0;
+        }
+        if (isEmptyOrNull(hairColour)){
+            this.hairColour="unknown";
+        }else{
+            this.hairColour = hairColour;
+        }
+    }
+
+    protected boolean isEmptyOrNull(String string) {
+        return string == null || string.isBlank();
+    }
+
+    protected boolean isPositiveNumber(Number number) {
+        if (number instanceof Integer) {
+            return (Integer) number > 0;
+        } else if (number instanceof Double) {
+            return (Double) number > 0.0;
+        }
+        return false;
     }
 
     public String name() {

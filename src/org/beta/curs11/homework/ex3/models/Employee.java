@@ -9,8 +9,16 @@ public class Employee extends Person {
 
     public Employee(String name, Integer age, String hairColour, String company, Double salary) {
         super(name, age, hairColour);
-        this.company = company;
-        this.salary = salary;
+        if(isEmptyOrNull(company)){
+            this.company="unknown";
+        }else{
+            this.company = company;
+        }
+        if(isPositiveNumber(salary)){
+            this.salary = salary;
+        }else{
+            this.salary=0d;
+        }
     }
 
     public Double salary() {
