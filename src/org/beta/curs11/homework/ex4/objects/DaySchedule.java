@@ -27,6 +27,14 @@ public class DaySchedule {
         return activities;
     }
 
+    public void addActivity(String activity){
+        activities.add(activity);
+    }
+
+    public void removeActivity(String activity){
+        activities.remove(activity);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

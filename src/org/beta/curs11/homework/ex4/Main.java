@@ -14,7 +14,13 @@ public class Main {
         DaySchedule schedule3 = new DaySchedule(null,activities);
 
         System.out.println(schedule);
-        System.out.println(schedule2);
-        System.out.println(schedule3);
+
+        schedule.addActivity("Beach volley");
+        System.out.println(schedule);
+        schedule.removeActivity("Go to the beach");
+        System.out.println(schedule);
+
+//        System.out.println(schedule2);
+//        System.out.println(schedule3);
     }
 }
